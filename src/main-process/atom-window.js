@@ -317,7 +317,7 @@ module.exports = class AtomWindow extends EventEmitter {
   }
 
   addLocationsToOpen(locationsToOpen) {
-    const roots = new Set(this.projectRoots || []);
+    const roots = new Set(this.projectRoots || [""]);
     for (const { pathToOpen, isDirectory } of locationsToOpen) {
       if (isDirectory) {
         roots.add(pathToOpen);
